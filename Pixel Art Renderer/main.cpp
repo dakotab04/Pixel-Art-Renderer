@@ -200,6 +200,11 @@ int main()
 			std::cout << "Closing program..." << '\n';
 			loop = false;
 		}
+		else if (std::cin.fail())
+		{
+			std::cout << "Closing program..." << '\n';
+			loop = false;
+		}
 	}
 
 	return 0;
