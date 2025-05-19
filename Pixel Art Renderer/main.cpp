@@ -190,6 +190,7 @@ int main()
 		If user inputs a sentinel value (e.g. -1 -1), exit the loop*/
 		if (x == -1 || y == -1)
 		{
+			std::cout << "Closing program..." << '\n';
 			loop = false;
 		}
 	}
