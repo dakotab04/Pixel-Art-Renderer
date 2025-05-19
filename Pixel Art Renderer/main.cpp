@@ -1,5 +1,7 @@
 #include <iostream>
 
+void smiley_face(bool arr[][20]); // Forward declaration
+
 void preset_pattern(bool arr[][20])
 {
 	/*Store a pattern inside the initialize() function
@@ -16,102 +18,107 @@ void preset_pattern(bool arr[][20])
 	// Smiley face
 	if (choice == 1)
 	{
-		// First row
-		for (int i = 0; i < 1; ++i)
-		{
-			for (int j = 5; j < 15; ++j)
-			{
-				arr[i][j] = true;
-			}
-		}
+		smiley_face(arr);
+	}
+}
 
-		// Second row
-		for (int i = 1; i < 2; ++i)
+void smiley_face(bool arr[][20])
+{
+	// First row
+	for (int i = 0; i < 1; ++i)
+	{
+		for (int j = 5; j < 15; ++j)
 		{
-			for (int j = 3; j < 17; ++j)
-			{
-				arr[i][j] = true;
-			}
+			arr[i][j] = true;
 		}
+	}
 
-		// Third row
-		for (int i = 2; i < 3; ++i)
+	// Second row
+	for (int i = 1; i < 2; ++i)
+	{
+		for (int j = 3; j < 17; ++j)
 		{
-			for (int j = 1; j < 19; ++j)
-			{
-				arr[i][j] = true;
-			}
+			arr[i][j] = true;
 		}
+	}
 
-		// 4, 5, 6, 7 row
-		for (int i = 3; i < 7; ++i)
+	// Third row
+	for (int i = 2; i < 3; ++i)
+	{
+		for (int j = 1; j < 19; ++j)
 		{
-			for (int j = 0; j < 20; ++j)
-			{
-				arr[i][j] = true;
-			}
+			arr[i][j] = true;
 		}
+	}
 
-		// Eighth row
-		for (int i = 7; i < 8; ++i)
+	// 4, 5, 6, 7 row
+	for (int i = 3; i < 7; ++i)
+	{
+		for (int j = 0; j < 20; ++j)
 		{
-			for (int j = 1; j < 19; ++j)
-			{
-				arr[i][j] = true;
-			}
-			for (int j = 6; j < 14; ++j)
-			{
-				arr[i][j] = false;
-			}
+			arr[i][j] = true;
 		}
+	}
 
-		// Ninth row
-		for (int i = 8; i < 9; ++i)
+	// Eighth row
+	for (int i = 7; i < 8; ++i)
+	{
+		for (int j = 1; j < 19; ++j)
 		{
-			for (int j = 3; j < 17; ++j)
-			{
-				arr[i][j] = true;
-			}
+			arr[i][j] = true;
 		}
-
-		// Tenth row
-		for (int i = 9; i < 10; ++i)
+		for (int j = 6; j < 14; ++j)
 		{
-			for (int j = 5; j < 15; ++j)
-			{
-				arr[i][j] = true;
-			}
+			arr[i][j] = false;
 		}
+	}
 
-		// Eyes
-		for (int i = 3; i < 4; ++i)
+	// Ninth row
+	for (int i = 8; i < 9; ++i)
+	{
+		for (int j = 3; j < 17; ++j)
 		{
-			for (int j = 4; j < 7; ++j)
-			{
-				arr[i][j] = false;
-			}
-			for (int j = 13; j < 16; ++j)
-			{
-				arr[i][j] = false;
-			}
+			arr[i][j] = true;
 		}
+	}
 
-		// Mouth corners
-		for (int i = 6; i < 7; ++i)
+	// Tenth row
+	for (int i = 9; i < 10; ++i)
+	{
+		for (int j = 5; j < 15; ++j)
 		{
-			for (int j = 5; j < 6; ++j)
-			{
-				arr[i][j] = false;
-			}
-			for (int j = 14; j < 15; ++j)
-			{
-				arr[i][j] = false;
-			}
+			arr[i][j] = true;
+		}
+	}
+
+	// Eyes
+	for (int i = 3; i < 4; ++i)
+	{
+		for (int j = 4; j < 7; ++j)
+		{
+			arr[i][j] = false;
+		}
+		for (int j = 13; j < 16; ++j)
+		{
+			arr[i][j] = false;
+		}
+	}
+
+	// Mouth corners
+	for (int i = 6; i < 7; ++i)
+	{
+		for (int j = 5; j < 6; ++j)
+		{
+			arr[i][j] = false;
+		}
+		for (int j = 14; j < 15; ++j)
+		{
+			arr[i][j] = false;
 		}
 	}
 }
 
-void clearConsole()
+static void clearConsole()
 {
 	/*Clear the console screen (use system("cls"))
 	Re-render the grid*/
