@@ -130,7 +130,9 @@ int main()
 	bool arr[rows][columns] = {};
 
 	// Asks user if they'd like to start from a preset pattern.
-	std::cout << "Welcome to Pixel Art Renderer! \nWould you like to choose a preset pattern? (Y/N)." << '\n';
+	std::cout << "Welcome to Pixel Art Renderer!\n";
+	std::cout << "To close out of the program, enter - 1 as a coordinate value.\n"; 
+	std::cout << "Would you like to choose a preset pattern ? (Y / N).\n";
 	char choice{};
 	std::cin >> choice;
 	if (choice == 'Y' || choice == 'y')
